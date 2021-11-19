@@ -9,18 +9,18 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 - A basic search API to search the stored videos using their title and description.
 - Dockerize the project.
 - It should be scalable and optimised.
-- 
+  
 # To Instal all the requirements
     pip install -r requirements.txt
 
 # Database configuration
-python3 -m venv env
+    python3 -m venv env
 
-source env/bin/activate
+    source env/bin/activate
 
-install mysql the start the service
+    install mysql the start the service
 
-install mysql workbench
+    install mysql workbench
 
 ## Rescan servers: It finds the running MySQL instance and saves that connection in the MySQL connections area
 
@@ -66,25 +66,22 @@ python manage.py migrate
 You should see it reporting in the terminal that it is migrating tables for all the INSTALLED_APPS.
 
 # Installing Redis
-1.curl -O http://download.redis.io/releases/redis-5.0.5.tar.gz 
+    1.curl -O http://download.redis.io/releases/redis-5.0.5.tar.gz 
 
-2.tar xzf redis-5.0.5.tar.gz
+    2.tar xzf redis-5.0.5.tar.gz
 
-3.cd redis-5.0.5
+    3.cd redis-5.0.5
 
-4.make
+    4.make
 
 To Run the server: "src/redis-server"
 
 
 # Enabling redis server and using celery worker and beat
-src/redis-server
+    src/redis-server
 
-python manage.py runserver
+    python manage.py runserver
 
-celery -A app_name worker -l info
+    celery -A app_name worker -l info
 
-celery -A app_name beat -l info
-
-
-
+    celery -A app_name beat -l info
